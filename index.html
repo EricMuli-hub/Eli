@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaChain AI Verifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><header>
+    <h1>NovaChain AI Verifier</h1>
+    <p>By Eric Muli Makau</p>
+</header><!-- LANDING --><section id="landing">
+    <h2>Secure Academic Credential Verification</h2>
+    <p>Powered by Blockchain & AI</p>
+    <button onclick="showSection('register')">Register</button>
+    <button onclick="showSection('login')">Login</button>
+</section><!-- REGISTER --><section id="register" class="hidden">
+    <h2>Register</h2>
+    <input id="regUser" placeholder="Username">
+    <input id="regPass" type="password" placeholder="Password">
+    <button onclick="register()">Create Account</button>
+</section><!-- LOGIN --><section id="login" class="hidden">
+    <h2>Login</h2>
+    <input id="logUser" placeholder="Username">
+    <input id="logPass" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+</section><!-- DASHBOARD --><section id="dashboard" class="hidden">
+    <h2>Dashboard</h2><div class="grid">
+    <button onclick="showSection('student')">Student</button>
+    <button onclick="showSection('institution')">Institution</button>
+    <button onclick="showSection('employer')">Employer</button>
+    <button onclick="showSection('upload')">Upload Credential</button>
+    <button onclick="showSection('verify')">Verify</button>
+    <button onclick="showSection('ai')">AI Analysis</button>
+</div>
+
+</section><!-- STUDENT --><section id="student" class="hidden">
+    <h3>Student Dashboard</h3>
+    <p>View your certificates and status.</p>
+</section><!-- INSTITUTION --><section id="institution" class="hidden">
+    <h3>Institution Dashboard</h3>
+    <p>Approve and upload certificates.</p>
+</section><!-- EMPLOYER --><section id="employer" class="hidden">
+    <h3>Employer Dashboard</h3>
+    <p>Verify candidate credentials.</p>
+</section><!-- UPLOAD --><section id="upload" class="hidden">
+    <h3>Upload Credential</h3>
+    <input id="certName" placeholder="Certificate Name">
+    <button onclick="uploadCert()">Upload to Blockchain</button>
+</section><!-- VERIFY --><section id="verify" class="hidden">
+    <h3>Verify Credential</h3>
+    <input id="verifyInput" placeholder="Enter Certificate Name">
+    <button onclick="verifyCert()">Verify</button>
+    <p id="verifyResult"></p>
+</section><!-- AI --><section id="ai" class="hidden">
+    <h3>AI Analysis</h3>
+    <button onclick="runAI()">Run AI Fraud Detection</button>
+    <p id="aiResult"></p>
+</section><script src="script.js"></script></body>
+</html>
